@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 public class CustAdapter extends RecyclerView.Adapter<CustAdapter.CustViewHolder> {
 
     private Users user[] ;
@@ -30,6 +32,13 @@ public class CustAdapter extends RecyclerView.Adapter<CustAdapter.CustViewHolder
     public void onBindViewHolder(@NonNull CustViewHolder custViewHolder, int i) {
         Users U = user[i] ;
         custViewHolder.tv1.setText(U.getLogin());
+        Glide.with(context).load(U.getAvatarUrl()).into(custViewHolder.img1) ;
+        custViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
     }
 
