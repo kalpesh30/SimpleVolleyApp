@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv_1) ;
-        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,3));
 
         StringRequest request = new StringRequest(BASE_URL, new Response.Listener<String>() {
             @Override
